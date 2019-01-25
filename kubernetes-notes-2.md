@@ -47,13 +47,14 @@ On the other hand, containers perform __system calls__ to the __kernel__ in the 
 
 ![Containers](./images/containers.png)
 <br/>
+<br/>
 
 ## Isolating containers
 
 Containers can be isolated thanks to two Linux mechanisms:
 - __Linux namespaces:__ ensures a process can only see its own view of the system.
 - __Linux control groups (_cgroups_):__ limit the amount of resources that a process can use (CPU, memory, network bandwidth, etc).
-
+<br/>
 
 ### Linux Namespaces
 
