@@ -1,6 +1,4 @@
-# Kubernetes 101
-
-## Part 2: Introduction to Containers
+# Part 2: Introduction to Containers
 
 The differences in the environments used to run an application has always been a problem:
 - Development environments
@@ -13,7 +11,7 @@ The differences in the environments used to run an application has always been a
 To prevent problems, the ideal scenario would be to run an application always in the same environment, during development and production, with the exact same OS, libraries, system configuration, network environments, etc. Also, it would be ideal to add new applications to the server without affecting the existing ones.
 <br/>
 
-### Container technologies
+## Container technologies
 
 Kubernetes uses Linux container technologies (like __Docker__ and __rkt__) to isolate the different applications running.
 
@@ -22,7 +20,7 @@ When working with large applications, in small numbers, it's acceptable to use _
 __Linux containers__ enable us to run multiple isolated services in the same host machine, with different environments for each of them.
 <br/>
 
-### Containers vs VMs
+## Containers vs VMs
 
 Containers are more lightweight:
 - __VMs:__ Require their own set of system resources.
@@ -47,14 +45,14 @@ On the other hand, containers perform __system calls__ to the __kernel__ in the 
 ![Containers](./images/containers.png)
 
 
-### Isolating containers
+## Isolating containers
 
 Containers can be isolated thanks to two Linux mechanisms:
 - __Linux namespaces:__ ensures a process can only see its own view of the system.
 - __Linux control groups (_cgroups_)__ limit the amount of resources that a process can use (CPU, memory, network bandwidth, etc).
 
 
-#### Linux Namespaces
+### Linux Namespaces
 
 Linux systems have initially one single __namespace__. The namespace owns system resources, such as:
 - Filesystems
@@ -74,7 +72,7 @@ The kinds of namespaces are:
 - User ID (_user_)
 <br/>
 
-#### Linux control groups
+### Linux control groups
 
 The Linux control groups, or _cgroups_ limit the resources that a process or group of processes can use. Therefore, a process cannot use more than the defined amount of CPU, memory, network bandwidth, etc.
 <br/>
