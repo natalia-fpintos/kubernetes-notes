@@ -16,5 +16,5 @@
 
 - Kubernetes helps us manage the __scalability__ of our application
 - It also takes care of managing the __resources__ we use (from a data centre for example). This is also done by Docker Swarm and Mesosphere DC/OS
-- It does everything n a platform agnostic way
+- It does everything in a platform agnostic way
 - It allows you to define networks to use, as well as persist storage
