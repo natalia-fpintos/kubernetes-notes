@@ -79,3 +79,23 @@ The kinds of namespaces are:
 ### Linux control groups
 
 The Linux control groups, or _cgroups_ limit the resources that a process or group of processes can use. Therefore, a process cannot use more than the defined amount of CPU, memory, network bandwidth, etc.
+<br/>
+
+### Docker
+
+Docker is a container platform that has made containers easily portable across machines. It allows to package the application with all its libraries and dependencies, as well as the OS system, into a __package__, which can be used to provision the application to another machine running Docker.
+
+The application packaged, when running, sees only the filesystem that was bundled with it. It won't be able to see anything related to the server it's running on.
+
+Docker __container images__ are made of layers, that can be used and shared across other images. This means that, if we pull an image, any successive images we pull, which can share any of the layers previously downloaded, won't need to download the same layer again.
+
+When we package a Docker image, we can then upload it to a __central repository__, where other computers can download this image and run it.
+
+Some relevant concepts in Docker are:
+
+* __Images:__ a Docker container image is where we package our application and its environment and filesystem. It will also contain metadata, such as a path to the executable which will be executed when the image is run.
+
+* __Registries:__ a Docker registry is where images are uploaded and stored, making it easy to be shared across different machines. Images are pushed and pulled from these, and they can be public or private.
+
+* __Containers:__ a Docker container is a Linux container, which has been created from a Docker container image. A running container is a process running on a host running Docker, completely isolated, with constrained resources (it can only access the resources that it has been allocated).
+
