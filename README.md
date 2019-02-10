@@ -2,6 +2,7 @@
 
 1. [Introduction to Microservices](https://github.com/alysanne/kubernetes-notes/blob/master/kubernetes-notes-1.md)
 2. [Introduction to Containers](https://github.com/alysanne/kubernetes-notes/blob/master/kubernetes-notes-2.md)
+2. [Introduction to Kubernetes](https://github.com/alysanne/kubernetes-notes/blob/master/kubernetes-notes-3.md)
 
 
 ## A brief summary
