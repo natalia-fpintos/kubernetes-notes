@@ -49,7 +49,6 @@ The process in which the `kube-apiserver` usually works is the following:
 5. This deployment to the nodes in the cluster is based on the interaction of all the components
 <br/>
 
-
 # K8s Nodes
 
 A k8s node is a worker that takes care of doing the tasks we ask them to (i.e. running our applications). They are made of some elements:
@@ -67,5 +66,45 @@ A k8s node is a worker that takes care of doing the tasks we ask them to (i.e. r
   - Ensures each pod gets a __unique IP address__. All containers in a pod will share this IP.
   - Takes care of the __load balancing__ for all the pods in a __service__ (a service is a way to hide multiple pods behind a single network -IP- address). This means that we can access the functionality of our application, which can be replicated across multiple pods with different IP addresses, on a single IP address. When a request reaches this service address, the kube-proxy is responsible for load balancing and directing the requests to the different pods.
 
+Every node has a __set of default system pods__, which take care of logging, health checking, DNS, etc.
+
 ![Service](./images/service.png)
+<br/>
+
+## Labels
+
+Pods can have labels, these are used to specify important information about them (i.e. their version, type, prod/dev, etc).
+<br/>
+
+## Pods
+
+Pods are the __atomic unit__ of scheduling in k8s. Similar to a VM in a virtual machine environment, and a container in a Docker environment.
+
+Containers need to be run inside pods, they cannot be run in k8s without them.
+
+The pod is an __environment__ to run containers. It has its own network stack, kernel namespaces...
+Therefore, all containers in a pod will share this same environment (and IP address, filesystem, networks... for example).
+
+In order to scale, we add more pods that have their own containers. The only reason why we might run more than one container in the same pod, is when the containers are tightly coupled and need to be together.
+
+When a new pod is created, it's only considered to be up when it has completely finished setting up any containers it holds. As it's an __atomic unit__, it is considered as a whole, even in multiple container scenarios.
+<br/>
+
+### The pod lifecycle
+
+Pods can have three states:
+    - __Pending phase:__ the pod is preparing to run.
+    - __Running phase:__ the pod is working and the containers are running processes inside it.
+    - __Succeeded/Failed phase:__ the pod succeeded or failed. It's never re-used after it finished its execution. If we need the pod again, another one will be created in its place.
+
+![Pod lifecycle](./images/pod-lifecycle.png)
+<br/>
+
+### Pod deployment
+
+Pod deployment usually is done indirectly via a __Deployment__. However, it's also possible to deploy them directly by giving the `apiserver` a __Pod manifest__ file.
+
+It is also possible to deploy Pods in __Replication controllers__. These are a higher-level construct, such as a Deployment, which takes pods and adds features around them. They make sure that the desired number of replicas is running. These are being superseeded by using Deployments, which take care of the replica number and more.
+
+![Replication Controller](./images/replication-controller.png)
 <br/>
