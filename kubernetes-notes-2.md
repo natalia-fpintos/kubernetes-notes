@@ -22,7 +22,7 @@ __Linux containers__ enable us to run multiple isolated services in the same hos
 <br/>
 <br/>
 
-## Containers vs VMs
+## Linux Containers vs VMs
 
 Containers are more lightweight:
 - __VMs:__ Require their own set of system resources.

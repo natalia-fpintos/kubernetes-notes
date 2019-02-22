@@ -67,5 +67,5 @@ A k8s node is a worker that takes care of doing the tasks we ask them to (i.e. r
   - Ensures each pod gets a __unique IP address__. All containers in a pod will share this IP.
   - Takes care of the __load balancing__ for all the pods in a __service__ (a service is a way to hide multiple pods behind a single network -IP- address). This means that we can access the functionality of our application, which can be replicated across multiple pods with different IP addresses, on a single IP address. When a request reaches this service address, the kube-proxy is responsible for load balancing and directing the requests to the different pods.
 
-![Service](.images/service.png)
+![Service](./images/service.png)
 <br/>
