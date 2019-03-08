@@ -80,6 +80,8 @@ Pods can have labels, these are used to specify important information about them
 
 Pods are the __atomic unit__ of scheduling in k8s. Similar to a VM in a virtual machine environment, and a container in a Docker environment.
 
+![Atomic Units](./images/atomic-units.png)
+
 Containers need to be run inside pods, they cannot be run in k8s without them.
 
 The pod is an __environment__ to run containers. It has its own network stack, kernel namespaces...

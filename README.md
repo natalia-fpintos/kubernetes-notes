@@ -4,7 +4,10 @@
 2. [Introduction to Containers](https://github.com/alysanne/kubernetes-notes/blob/master/kubernetes-notes-2.md)
 3. [Introduction to Kubernetes](https://github.com/alysanne/kubernetes-notes/blob/master/kubernetes-notes-3.md)
 4. [Declaring services and deployments](https://github.com/alysanne/kubernetes-notes/blob/master/kubernetes-notes-4.md)
-
+5. [Part A - Installing K8s - Minikube](https://github.com/alysanne/kubernetes-notes/blob/master/kubernetes-notes-5.md)
+5. [Part B - Installing K8s - Google Container Engine (GKE)](https://github.com/alysanne/kubernetes-notes/blob/master/kubernetes-notes-6.md)
+5. [Part C - Manual installation of K8s](https://github.com/alysanne/kubernetes-notes/blob/master/kubernetes-notes-7.md)
+6. [](https://github.com/alysanne/kubernetes-notes/blob/master/kubernetes-notes-8.md)
 
 ## A brief summary
 

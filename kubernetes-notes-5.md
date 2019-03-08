@@ -1,4 +1,4 @@
-# Part 5: Installing K8s
+# Part 5A: Installing K8s - Minikube
 
 ## Minikube
 
