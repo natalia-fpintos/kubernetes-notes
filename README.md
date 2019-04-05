@@ -7,7 +7,11 @@
 5. [Part A - Installing K8s - Minikube](https://github.com/alysanne/kubernetes-notes/blob/master/kubernetes-notes-5.md)
 5. [Part B - Installing K8s - Google Container Engine (GKE)](https://github.com/alysanne/kubernetes-notes/blob/master/kubernetes-notes-6.md)
 5. [Part C - Manual installation of K8s](https://github.com/alysanne/kubernetes-notes/blob/master/kubernetes-notes-7.md)
-6. [](https://github.com/alysanne/kubernetes-notes/blob/master/kubernetes-notes-8.md)
+6. [Working with pods](https://github.com/alysanne/kubernetes-notes/blob/master/kubernetes-notes-8.md)
+7. [Manifest files](https://github.com/alysanne/kubernetes-notes/blob/master/kubernetes-notes-9.md)
+8. [How to access our apps - Services](https://github.com/alysanne/kubernetes-notes/blob/master/kubernetes-notes-10.md)
+9. [Kubernetes Deployments](https://github.com/alysanne/kubernetes-notes/blob/master/kubernetes-notes-11.md)
+
 
 ## A brief summary
 

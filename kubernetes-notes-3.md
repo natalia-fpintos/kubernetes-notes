@@ -100,6 +100,8 @@ Pods can have three states:
     - __Succeeded/Failed phase:__ the pod succeeded or failed. It's never re-used after it finished its execution. If we need the pod again, another one will be created in its place.
 
 ![Pod lifecycle](./images/pod-lifecycle.png)
+
+![Pod lifecycle](./images/pod-lifecycle-2.png)
 <br/>
 
 ### Pod deployment
