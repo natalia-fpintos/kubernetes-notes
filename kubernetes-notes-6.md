@@ -1,4 +1,4 @@
-# Part 5B: Installing K8s - Google Container Engine (GKE)
+# Part 6: Installing K8s - Google Container Engine (GKE)
 
 ## Google Container Engine
 

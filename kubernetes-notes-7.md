@@ -1,4 +1,4 @@
-# Part 5C: Manual installation of K8s
+# Part 7: Manual installation of K8s
 
 ## Manual install with _kubeadm_
 

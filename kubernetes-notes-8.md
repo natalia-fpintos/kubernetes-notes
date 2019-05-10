@@ -1,4 +1,4 @@
-# Part 6: Working with pods
+# Part 8: Working with pods
 
 ## Pods and Containers
 

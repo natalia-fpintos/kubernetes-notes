@@ -1,4 +1,4 @@
-# Part 7: Manifest files
+# Part 9: Manifest files
 
 ## Pods
 

@@ -1,4 +1,4 @@
-# Part 9: Kubernetes Deployments
+# Part 11: Kubernetes Deployments
 
 ## Deployments
 
