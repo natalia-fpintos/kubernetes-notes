@@ -91,6 +91,8 @@ Docker __container images__ are made of layers, that can be used and shared acro
 
 When we package a Docker image, we can then upload it to a __central repository__, where other computers can download this image and run it.
 
+![Docker Images](./images/docker-images.png)
+
 Some relevant concepts in Docker are:
 
 * __Images:__ a Docker container image is where we package our application and its environment and filesystem. It will also contain metadata, such as a path to the executable which will be executed when the image is run.
@@ -98,4 +100,18 @@ Some relevant concepts in Docker are:
 * __Registries:__ a Docker registry is where images are uploaded and stored, making it easy to be shared across different machines. Images are pushed and pulled from these, and they can be public or private.
 
 * __Containers:__ a Docker container is a Linux container, which has been created from a Docker container image. A running container is a process running on a host running Docker, completely isolated, with constrained resources (it can only access the resources that it has been allocated).
+<br/>
+
+#### Docker container layers
+
+A Docker container is isolated, but can share binaries and libraries with other containers. This is done via the use of __layers__.
+
+In the example below we can see how Docker containers can also share binaries and libraries, as it would happen in a VM:
+
+![VMs](./images/vm-apps.png)
+![Docker Containers](./images/docker-apps.png)
+
+Two containers that are built on top of the same __base image__ (parent image) will share common layers. This means that the distribution will be more efficient, as layers that have already been downloaded don't need to be pulled again. However, it also means that running these processes will also be more efficient, as the layer will only be stored once and will be shared (in a `read-only` way) by those two containers.
+
+If we want to make changes to a file which is in one of the existing layers of a Docker image, a new copy of the file will be made with the new changes, and this will be saved in a __new layer__ on top of the old ones. This way, the older layers can still be shared, unchanged.
 
